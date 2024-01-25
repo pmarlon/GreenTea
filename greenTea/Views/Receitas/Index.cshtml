@@ -1,0 +1,40 @@
+﻿@model IEnumerable<greenTea.Models.Receita>
+
+@{ ViewData["Title"] = "Receitas"; }
+<div class="position-relative">
+    <img style="max-height: 200px; filter: opacity(100%)" src="https://nutricionistasjc.files.wordpress.com/2012/01/cropped-cabecalho_nutricao1.jpg" />
+</div>
+<br /><br /><br /><br />
+<div class="container mb-5">
+    <div class="row align-content-around">
+        <h1 class="col-8 ml-2">Receitas Sem Gluten e Sem Caseína</h1>
+        <p class="col-3 d-flex justify-content-end">
+            <a asp-action="Create" class="btn btn-info" style="max-height:40px; max-width: 100px;">Criar novo</a>
+        </p>
+    </div>
+    <hr /> <br />
+    <h2>Receitas divertidas e saborósas</h2>
+    <p class="ml-4">É importante que as crianças tenham uma familiaridade com o alimento para se sentirem atraídas por ele, chamar o seu pequeno para ajudar na hora do preparo da refeição pode ajudar nisso.</p>
+    <section class="portfolio-block projects-cards">
+        <div class="container">
+            <div class="heading"></div>
+            <div class="row">
+                @foreach (var item in Model)
+                {
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+        <div class="card border-0" style="min-height: 350px; background: #f8f8f8;">
+            <a asp-action="Details" asp-route-id="@item.Id">
+                <img class="card-img-top scale-on-hover card_index_receita_img" src="@Html.DisplayFor(modelItem => item.UrlImg)" alt="Card Image">
+            </a>
+            <div class=" card_index_receita">
+                <h5 class="p-1" style="min-height: 50px;">@Html.DisplayFor(modelItem => item.NomeReceita)</h5>
+                <p class="text-muted card-text  " style="max-height: 100px; overflow: hidden;">
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </p>
+            </div>
+        </div>
+    </div>}
+            </div>
+        </div>
+    </section>
+</div>

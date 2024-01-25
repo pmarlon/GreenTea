@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<div class="d-flex justify-content-end container-fluid mt-4 collapse navbar-collapse text-center" style="max-width:80px;">
+    <ul class="navbar-nav">
+        @if (SignInManager.IsSignedIn(User))
+        {
+           
+            <li class="nav-item" data-bss-hover-animate="pulse">
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="nav-link btn btn-link rounded-pill text-white" style="background: linear-gradient(97deg, #00E4D0, #4D90E5), #6AbFdC;width:80px;border-color:white;">Logout</button>
+                </form>
+            </li>
+        }
+        else
+        {
+           
+            <li class="nav-item mt-2 container-fluid img-fluid" data-bss-hover-animate="pulse" style="width:100px;">
+                <a class="nav-link shadow-lg rounded-pill img-fluid text-white" style="background: linear-gradient(97deg, #00E4D0, #4D90E5), #6AbFdC;" asp-area="Identity" asp-page="/Account/Login">Login</a>
+            </li>
+        }
+    </ul>
+</div>
+

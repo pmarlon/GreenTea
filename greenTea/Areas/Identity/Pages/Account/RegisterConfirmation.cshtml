@@ -1,0 +1,25 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Confirmação de registro";
+}
+
+ <div class="container text-center mt-5"><h1>@ViewData["Title"]</h1></div>>
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+    <div class="container text-center mt-5">
+    <p>
+    Esse aplicativo não envia realmente uma verificação, veja em <a href="https://aka.ms/aspaccountconf">essa documentação</a>, implementação futura.    
+    </p>
+    </div>
+    }
+    else
+    {
+    <div class="container text-center mt-5">     
+        <p>
+                    Por favor cheque seu email.
+        </p>
+    </div>
+    }
+}

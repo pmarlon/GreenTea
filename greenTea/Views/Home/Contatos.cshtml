@@ -1,0 +1,46 @@
+
+@{ ViewData["Title"] = "Contatos"; }
+
+<div class="position-relative">
+    <img style="filter: opacity(50%)" src="~/media/puzzles.jpeg" />
+</div>
+<br />
+
+<div class="container">
+    <main class="page contact-us-page">
+        <section class="clean-block clean-form dark bg-white">
+            <div class="block-heading mb-4 p-3">
+                <h2 class="text-info">Fale conosco</h2>
+                <p>
+                    Deixe aqui suas duvidas, elogios e sugestões para melhorar nossos serviços.
+                </p>
+            </div>
+            <hr />
+            <div class="container row">
+                <form class=" col-10">
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Nome</label>
+                        <input class="form-control" type="text" id="name" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control" type="email" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="assunto">Assunto</label>
+                        <input class="form-control" type="text" id="assunto" name="assunto">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="msg">Mensagem</label>
+                        <textarea class="form-control" rows="6" id="msg" name="msg"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <a class="btn btn-primary" asp-action="Index">Enviar</a>
+                    </div>
+                </form>
+                
+            </div>
+        </section>
+    </main>
+</div>
+

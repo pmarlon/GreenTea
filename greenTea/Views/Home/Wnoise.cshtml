@@ -1,0 +1,183 @@
+﻿@{ ViewData["Title"] = "White Noise"; }
+
+@{
+    var Aquecedor = "/whiteNoises/Aquecedor.mp3";
+    var Aspirador = "/whiteNoises/Aspirador.mp3";
+    var Carro = "/whiteNoises/Carro.mp3";
+    var Cascata = "/whiteNoises/Cascata.mp3";
+    var Chuva = "/whiteNoises/Chuva.mp3";
+    var Chuveiro = "/whiteNoises/Chuveiro.mp3";
+    var Mar = "/whiteNoises/Mar.mp3";
+    var Nebulizador = "/whiteNoises/Nebulizador.mp3";
+    var Secador = "/whiteNoises/Secador.mp3";
+    var Ulterino = "/whiteNoises/Ulterino.mp3";
+    var Ventilador = "/whiteNoises/Ventilador.mp3";
+    <div class="position-relative">
+        <img style="max-height: 200px; filter: opacity(100%)" src="https://thumbs.dreamstime.com/b/notas-de-m%C3%BAsica-preta-em-faixas-coloridas-e-imagens-fundo-banner-ilustra%C3%A7%C3%A3o-das-negra-que-fluem-sobre-salva-curvada-206751277.jpg" />
+    </div>
+        <hr />
+    <div class="container mb-5 text-center">
+        <br />
+        <div class="page gallery-page">
+            <section class="clean-block clean-gallery dark">
+                <div class="container">
+                    <div class="block-heading">
+                        <h1 class="text-info">White Noise</h1>
+                        <p>Escolha um tipo de som para ser ouvido como barulho de fundo.</p>
+                    </div>
+                    <div class="" style="align-items:center; justify-content:center">
+
+                        <fieldset class="radio-image row d-flex">
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w7">
+                                        <input type="radio" checked name="w-noise" id="w7" class=" text-center" onclick="player('.track7')">
+                                        <img src="/icons/mute.png">
+                                        <span>Desliga</span>
+                                        <audio preload="metadata" class="track7" src=""></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w3">
+                                        <input type="radio" name="w-noise" id="w3" class=" text-center" onclick="player('.track3')">
+                                        <img src="/icons/rain (1).png">
+                                        <span>Chuva</span>
+                                        <audio loop preload="metadata" class="track3" src="@Chuva"></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w4">
+                                        <input type="radio" name="w-noise" id="w4" class=" text-center" onclick="player('.track4')">
+                                        <img src="/icons/cascata.png">
+                                        <span>Cascata</span>
+                                        <audio loop preload="metadata" class="track4" src="@Cascata"></audio>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w5">
+                                        <input type="radio" name="w-noise" id="w5" class=" text-center" onclick="player('.track5')">
+                                        <img src="/icons/onda.png">
+                                        <span>Ondas</span>
+                                        <audio loop preload="metadata" class="track5" src="@Mar"></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w6">
+                                        <input type="radio" name="w-noise" id="w6" class=" text-center" onclick="player('.track6')">
+                                        <img src="/icons/chuveiro.png">
+                                        <span style="left: 40px;">Chuveiro</span>
+                                        <audio loop preload="metadata" class="track6" src="@Chuveiro"></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w9">
+                                        <input type="radio" name="w-noise" id="w9" class=" text-center" onclick="player('.track9')">
+                                        <img src="/icons/gravida.png">
+                                        <span>Uterino</span>
+                                        <audio loop preload="metadata" class="track9" src="@Ulterino"></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w11">
+                                        <input type="radio" name="w-noise" id="w11" class=" text-center" onclick="player('.track11')">
+                                        <img src="/icons/car (1).png">
+                                        <span>Carro</span>
+                                        <audio loop preload="metadata" class="track11" src="@Carro"></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w44">
+                                        <input type="radio" name="w-noise" id="w44" class=" text-center" onclick="player('.track44')">
+                                        <img src="/icons/aquecedor.png">
+                                        <span style="left: 36px;">Aquecedor</span>
+                                        <audio loop preload="metadata" class="track44" src="@Aquecedor"></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w55">
+                                        <input type="radio" name="w-noise" id="w55" class=" text-center" onclick="player('.track55')">
+                                        <img src="/icons/aspirador-de-po.png">
+                                        <span style="left: 40px;">Aspirador</span>
+                                        <audio loop preload="metadata" class="track55" src="@Aspirador"></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w66">
+                                        <input type="radio" name="w-noise" id="w66" class=" text-center" onclick="player('.track66')">
+                                        <img src="/icons/secador-de-cabelo.png">
+                                        <span>Secador</span>
+                                        <audio loop preload="metadata" class="track66" src="@Secador"></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w77">
+                                        <input type="radio" name="w-noise" id="w77" class=" text-center" onclick="player('.track77')">
+                                        <img src="/icons/ventilador-de-mesa.png">
+                                        <span style="left: 40px;">Ventilador</span>
+                                        <audio loop preload="metadata" class="track77" src="@Ventilador"></audio>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3  mb-2 rounded-lg d-flex wrap justify-content-center">
+                                <div style="width: 170px; position:relative;">
+                                    <label for="w88">
+                                        <input type="radio" name="w-noise" id="w88" class=" text-center sd" onclick="player('.track88')">
+                                        <img src="/icons/nebulizer.png">
+                                        <span style="left: 36px;">Nebulizador</span>
+                                        <audio loop preload="metadata" class="track88" src="@Nebulizador"></audio>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        let cont = 0;
+        const player = (track) => {
+            const audio = document.querySelector(track);
+            const pauseGeral = document.querySelectorAll("audio");
+            for (var i = 0; i < pauseGeral.length; i++) {
+                pauseGeral[i].pause();
+            }
+            audio.play();
+        };
+    </script>
+
+}
+
