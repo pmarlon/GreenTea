@@ -72,23 +72,19 @@
                         var cont2 = 0;
                         foreach (var parte in ingsPorParte)
                         {
-                            <h4>@parte</h4>
                             cont1++;
-                            string[] ings = parte.Split(';');
+                            string[] ings = parte.Split(Environment.NewLine);
                             foreach (var i in ings)
                             {
-                                cont2++;
+                                            cont2++;
                                 if (i == ings[0] && ingsPorParte.Length > 1)
                                 {
-                                    <h4>@ings[0]</h4>
+                                    <h4>@i</h4>
                                 }
-                                else if (i == ings[ings.Length - 1])
-                                {
-                                    //continue;
-                                }
+                                
                                 else
                                 {
-                                    var check1 = cont1 + "ings" + cont2;
+                                   var check1 = cont1 + "ings" + cont2;
                                     <fieldset class="check-image">
                                         <label for="@check1" class="ml-3 d-flex">
                                             <input class=" text-center" type="checkbox" name="@check1" id="@check1"><i></i>
