@@ -73,15 +73,19 @@
                         foreach (var parte in ingsPorParte)
                         {
                             cont1++;
-                            string[] ings = parte.Split(Environment.NewLine);
+                            char[] delimiterChars = { ' ', ',', '.', ':', '\t', '\n'};
+                            string[] ings = parte.Split(delimiterChars);
                             foreach (var i in ings)
                             {
-                                            cont2++;
+                                cont2++;
                                 if (i == ings[0] && ingsPorParte.Length > 1)
                                 {
                                     <h4>@i</h4>
                                 }
-                                
+                                else if (i.Length < 1)
+                                {
+                                    continue;
+                                }
                                 else
                                 {
                                    var check1 = cont1 + "ings" + cont2;
