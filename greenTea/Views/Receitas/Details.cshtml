@@ -73,7 +73,7 @@
                         foreach (var parte in ingsPorParte)
                         {
                             cont1++;
-                            char[] delimiterChars = { ' ', ',', '.', ':', '\t', '\n'};
+                            char[] delimiterChars = { ' ', ',', '.', ':', ';', '\t', '\n'};
                             string[] ings = parte.Split(delimiterChars);
                             foreach (var i in ings)
                             {
@@ -102,15 +102,15 @@
                         var todosMod = Model.ModoPreparo;
 
                         string[] modPorParte = todosMod.ToString().Split('_');
-                       
                         <!--aux para classes dinamicas-->
                         var contAux = 0;
                         var cont = 1;
 
                         foreach (var parteMod in modPorParte)
                         {
+                            char[] delimiterChars = { ';', '\t', '\n'};
                             contAux++;
-                            string[] mod = parteMod.Split(';');
+                            string[] mod = (parteMod.Split(delimiterChars) => parteMod.Trim().ToString());
 
                             foreach (var b in mod)
                             {
@@ -118,12 +118,9 @@
                                 {
                                     <h4>@mod[0]</h4>
                                 }
-                                else if (b == mod[mod.Length - 1])
-                                {
-                                    continue;
-                                }
                                 else
                                 {
+                                    b () => string b.Trim();
                                     var check = contAux + "check" + cont;
                                     var texto = contAux + "texto" + cont;
                                     <div class="">

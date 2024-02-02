@@ -29,9 +29,8 @@ namespace greenTea.Models
         [Display(Name = "Descrição")]
         public string Descricao { get; set; }
 
-        [Required(ErrorMessage = "Adicione os ingredientes.</br>" +
-                                 "Cada seção deve começar com '-' seguido por ';' ex(-Massa;)." +
-                                 "Cada ingrediente deve terminar com ';' ex(farinha; açucar;)!")]
+        [Required(ErrorMessage = "Favor adicionar os ingredientes.")]
+        [MinLength(3, ErrorMessage = "Favor inserir ao menos um ingrediente")]
         [Column("Ingredientes")]
         [Display(Name = "Ingredientes")]
         public string Ingredientes { get; set; }
