@@ -12,7 +12,8 @@ nupkg/
 .idea/
 
 # Visual Studio
-.vs/
+.vs/*
+*.suo
 
 # Fleet
 .fleet/
@@ -27,17 +28,24 @@ nupkg/
 *.sln.docstates
 
 # Build results
-[Dd]ebug/*
-[Dd]ebugPublic/*
-[Rr]elease/*
-[Rr]eleases/*
+debug/*
+Debug/*
+debugPublic/*
+DebugPublic/*
+release/*
+Release/*
+Releases/*
+releases/*
 x64/*
 x86/*
 build/*
 bld/*
-[Bb]in/*
-[Oo]bj/*
-[Oo]ut/*
+Bin/*
+bin/*
+obj/*
+Obj/*
+out/*
+Out/*
 msbuild.log
 msbuild.err
 msbuild.wrn

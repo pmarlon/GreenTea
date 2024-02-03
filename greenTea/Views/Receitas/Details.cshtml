@@ -108,9 +108,10 @@
 
                         foreach (var parteMod in modPorParte)
                         {
+
                             char[] delimiterChars = { ';', '\t', '\n'};
+                            string[] mod = (parteMod.Split(delimiterChars));
                             contAux++;
-                            string[] mod = (parteMod.Split(delimiterChars) => parteMod.Trim().ToString());
 
                             foreach (var b in mod)
                             {
@@ -118,9 +119,12 @@
                                 {
                                     <h4>@mod[0]</h4>
                                 }
+                                else if (b.Length <=2 && b.Contains(' '))
+                                {
+                                    continue;
+                                }
                                 else
                                 {
-                                    b () => string b.Trim();
                                     var check = contAux + "check" + cont;
                                     var texto = contAux + "texto" + cont;
                                     <div class="">
