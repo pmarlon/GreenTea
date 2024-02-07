@@ -59,6 +59,17 @@ namespace greenTea.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult EnviarContato(ContatoViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewData["message"] = "Informações inválidas!";
+                return View("Contatos", model);
+            }
+            return View("EnviarContato");
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

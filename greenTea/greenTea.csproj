@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Home\EnviarContato.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Properties\ServiceDependencies\greenTeaa - Web Deploy\mssql1.arm.json" />
     <Content Include="Properties\ServiceDependencies\greenTeaa - Web Deploy\profile.arm.json" />
   </ItemGroup>

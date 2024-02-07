@@ -1,3 +1,4 @@
+@model ContatoViewModel
 
 @{ ViewData["Title"] = "Contatos"; }
 
@@ -16,26 +17,36 @@
                 </p>
             </div>
             <hr />
+            @if (ViewData["message"] != null)
+            {
+                <p class="alert alert-danger text-center">@ViewData["message"]</p>
+            }
             <div class="container row">
-                <form class=" col-10">
+               
+                <form class=" col-10" method="post" asp-action="EnviarContato" autocomplete="off">
                     <div class="mb-3">
-                        <label class="form-label" for="name">Nome</label>
-                        <input class="form-control" type="text" id="name" name="name">
+                        <label class="form-label" asp-for="Nome">Nome</label>
+                        <input class="form-control" type="text" asp-for="Nome">
+                        <span asp-validation-for="Nome" class="text-danger"></span>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="email">Email</label>
-                        <input class="form-control" type="email" id="email" name="email">
+                        <label class="form-label" asp-for="Email">Email</label>
+                        <input class="form-control" type="email" asp-for="Email">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="assunto">Assunto</label>
-                        <input class="form-control" type="text" id="assunto" name="assunto">
+                        <label class="form-label" asp-for="Assunto">Assunto</label>
+                        <input class="form-control" type="text" asp-for="Assunto">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="msg">Mensagem</label>
-                        <textarea class="form-control" rows="6" id="msg" name="msg"></textarea>
+                        <label class="form-label" asp-for="Mensagem">Mensagem</label>
+                        <textarea class="form-control" rows="6" asp-for="Mensagem"></textarea>
+                        <span asp-validation-for="Mensagem" class="text-danger"></span>
+
                     </div>
                     <div class="mb-3">
-                        <a class="btn btn-primary" asp-action="Index">Enviar</a>
+                        <input type="submit" class="btn btn-primary" value="Enviar" />
                     </div>
                 </form>
                 
@@ -44,3 +55,6 @@
     </main>
 </div>
 
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
