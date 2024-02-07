@@ -67,6 +67,11 @@ namespace greenTea.Controllers
                 ViewData["message"] = "Informações inválidas!";
                 return View("Contatos", model);
             }
+            /*
+             =================> OBSERVAÇÃO <===================
+                Por enquanto não será adicionada a configuração de smtp para envio de email.                
+
+             */
             return View("EnviarContato");
         }
 
